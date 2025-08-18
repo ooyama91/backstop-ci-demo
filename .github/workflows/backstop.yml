@@ -1,0 +1,37 @@
+name: BackstopJS
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  visual-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Create references if missing
+        run: |
+          if [ ! -d "backstop_data/bitmaps_reference" ]; then
+            npx backstop reference
+          fi
+
+      - name: Run Backstop test
+        run: npx backstop test || true
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: backstop-report
+          path: backstop_data/html_report
+          if-no-files-found: error

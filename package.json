@@ -1,0 +1,19 @@
+{
+  "name": "backstop-ci-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "vr:reference": "backstop reference",
+    "vr:test": "backstop test",
+    "vr:approve": "backstop approve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "backstopjs": "^6.3.25"
+  }
+}

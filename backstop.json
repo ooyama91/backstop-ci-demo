@@ -1,0 +1,17 @@
+{
+  "id": "backstop_ci_demo",
+  "viewports": [
+    { "label": "pc", "width": 1366, "height": 900 },
+    { "label": "sp", "width": 375, "height": 812 }
+  ],
+  "scenarios": [
+    {
+      "label": "home",
+      "url": "https://example.com/",
+      "delay": 300
+    }
+  ],
+  "engine": "puppeteer",
+  "report": ["html"],
+  "debug": false
+}
