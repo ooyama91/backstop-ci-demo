@@ -14,6 +14,6 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-  "backstopjs": "latest"
+    "backstopjs": "^6.3.25"
   }
 }
