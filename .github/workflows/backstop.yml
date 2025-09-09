@@ -38,3 +38,17 @@ jobs:
           name: backstop-report
           path: backstop_data/html_report
           if-no-files-found: error
+
+      - name: Upload reference images
+        uses: actions/upload-artifact@v4
+        with:
+          name: backstop-reference-images
+          path: backstop_data/bitmaps_reference
+          if-no-files-found: error
+
+      - name: Upload test images
+        uses: actions/upload-artifact@v4
+        with:
+          name: backstop-test-images
+          path: backstop_data/bitmaps_test
+          if-no-files-found: error

@@ -29,5 +29,9 @@
   },
   "engine": "puppeteer",
   "report": ["html"],
-  "debug": false
+  "debug": false,
+  "htmlReport": {
+    "path": "backstop_data/html_report",
+    "openReport": false
+  }
 }
