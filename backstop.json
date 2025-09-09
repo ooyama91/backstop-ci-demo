@@ -1,14 +1,23 @@
 {
   "id": "backstop_ci_demo",
   "viewports": [
-    { "label": "pc", "width": 1366, "height": 900 },
-    { "label": "sp", "width": 375, "height": 812 }
+    { "label": "desktop", "width": 1920, "height": 1080 },
+    { "label": "laptop", "width": 1366, "height": 768 },
+    { "label": "tablet", "width": 768, "height": 1024 },
+    { "label": "mobile", "width": 375, "height": 667 }
   ],
   "scenarios": [
     {
-      "label": "home",
-      "url": "https://example.com/",
-      "delay": 300
+      "label": "yahoo_japan_top",
+      "url": "https://www.yahoo.co.jp/",
+      "delay": 3000,
+      "selectors": ["body"]
+    },
+    {
+      "label": "yahoo_japan_news",
+      "url": "https://news.yahoo.co.jp/",
+      "delay": 3000,
+      "selectors": ["body"]
     }
   ],
   "paths": {
